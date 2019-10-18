@@ -9,11 +9,26 @@ public class CheckingAccount extends Accounts{
 	}
 	
 	public void withdrawAmount(int amount) {
-		
+		if(total>=amount)
+		{
+		  total -= amount; 
+		}
+		else
+		{
+		  overdraft();
+		}
+	}
+	
+	public void overdraft() {
+		total -= 5;
+	}
+	
+	public void MouthlyFixFee() {
+		total -= 4;
 	}
 	
 	public void depositAmount(int amount) {
-		
+		total += amount; 
 	}
 	
 	public double getBalance() {
