@@ -7,6 +7,9 @@ public class CheckingAccount extends Accounts{
 	public CheckingAccount() {
 		// TODO Auto-generated constructor stub
 	}
+	public boolean preconditionOfWithdrawAmount(int amount) {
+		return total - amount >= 0;
+	}
 	
 	public void withdrawAmount(int amount) {
 		
